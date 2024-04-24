@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('priorites', function(Blueprint $table){
-            $table->bigIncrements('id');
+            $table->smallIncrements('id');
 
             $table->string('name')->unique();
             $table->boolean('flag_status')->default(true);

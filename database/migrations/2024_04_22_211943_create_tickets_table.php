@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('priorites', function(Blueprint $table){
             $table->bigIncrements('id');
 
-            $table->unsignedSmallInteger('type_id')->required();
+            $table->unsignedSmallInteger('type_id')->nullable();
             $table->unsignedSmallInteger('priority_id')->required();
             $table->unsignedBigInteger('requester_user_id')->required();
             $table->string('name')->required();
@@ -25,6 +25,9 @@ return new class extends Migration
             $table->unsignedBigInteger('created_by')->index();
             $table->unsignedBigInteger('updated_by')->index();
 
+            $table->foreign('type_id')->references('id')->on('types')->onDelete('set null'); //Si un dato es alterado o eliminado se va a realizar eliminacion en cascada en todas las tablas foraneas
+            $table->foreign('priority_id')->references('id')->on('priorities');
+            $table->foreign('requester_user_id')->references('id')->on('users');
         });
     }
 

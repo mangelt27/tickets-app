@@ -12,10 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('types', function(Blueprint $table){
-            $table->bigIncrements('id');
-            
+            $table->smallIncrements('id');
+
             $table->string('name')->unique();
+
             $table->boolean('flag_status')->default(true);
+            
             $table->timestamps();
             $table->unsignedBigInteger('created_by')->index();
             $table->unsignedBigInteger('updated_by')->index();
