@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('priorites', function(Blueprint $table){
+        Schema::create('priorities', function(Blueprint $table){
             $table->smallIncrements('id');
 
             $table->string('name')->unique();
