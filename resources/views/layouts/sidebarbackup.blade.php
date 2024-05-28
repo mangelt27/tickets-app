@@ -11,7 +11,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../../dist/img/usuarioMiguel.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="../../dist/img/logoCorpen01.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
         <a href="#" class="d-block">Miguel Torres</a>
@@ -296,31 +296,12 @@
               </li>
             </ul>
           </li>
-          <!-- Gestion -->
-          <li class="nav-item">
-            <a href="../calendar.html" class="nav-link">
-              <i class="nav-icon fa fa-bolt"></i>
-              <p>
-                Gestion
-                <span class="badge badge-info right">2</span>
-              </p>
-            </a>
-          </li>
-          <!-- Tickets --><li class="nav-item">
-            <a href="../gallery.html" class="nav-link">
-              <i class="nav-icon fab fa-stack-overflow"></i>
-              <p>
-                Tickets
-              </p>
-            </a>
-          </li>
-    <!-- Seccion Configuración -->
-          <li class="nav-header">CONFIGURACION</li>
+          <li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
             <a href="../calendar.html" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
-                Tipos
+                Calendar
                 <span class="badge badge-info right">2</span>
               </p>
             </a>
@@ -329,57 +310,10 @@
             <a href="../gallery.html" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
-                Prioridades
+                Gallery
               </p>
             </a>
           </li>
-          <!-- fin Seccion Configuración -->
-          <!-- Seccion Reportes -->
-          <li class="nav-header">REPORTES</li>
-          <li class="nav-item">
-            <a href="../calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Nuevos Creados
-                </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="../gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Pendientes
-              </p>
-            </a>
-          </li>
-          <!-- fin Seccion Reportes -->
-          <!-- Seccion Administracion -->
-          <li class="nav-header">ADMINISTRACION</li>
-          <li class="nav-item">
-            <a href="../calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Usuarios
-                </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="../gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Roles
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="../gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Permisos
-              </p>
-            </a>
-          </li>
-          <!-- fin Seccion Administracion -->
           <!-- <li class="nav-item">
             <a href="../kanban.html" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>

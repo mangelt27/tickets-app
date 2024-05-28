@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Blank Page</title>
+  <title>{{env('APP_NAME')}} | @yield('web_title','Inicio')</title>
   <!-- <link rel="stylesheet" href= "{{ asset('assets/cssprueba.css') }}"> -->
   <!-- <link rel="stylesheet" href= "{{ asset('css/app.css') }}"> -->
   <!-- Google Font: Source Sans Pro -->

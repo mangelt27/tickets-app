@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 
+@section('web_title','Inicio Tickets')
+
+
+@section('title')
+<i class="fa fa-home"></i> Inicio
+@endsection
 
 @section('content')
     <div class="card">
