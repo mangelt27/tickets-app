@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name')->unique();
 
             $table->boolean('flag_status')->default(true);
-            
+
             $table->timestamps();
             $table->unsignedBigInteger('created_by')->index();
             $table->unsignedBigInteger('updated_by')->index();
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('types');
     }
 };

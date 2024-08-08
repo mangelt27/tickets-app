@@ -1,17 +1,18 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <!-- <a href="../../index3.html" class="brand-link">
-      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <!-- <span class="brand-text font-weight-light">AdminLTE 3</span> -->
-     <!--  <span class="brand-text font-weight-light">{{env('APP_NAME')}}</span> -->
-   <!--  </a> --> -->
+    <a href="../../index3.html" class="brand-link">
+      <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+       <span class="brand-text font-weight-light">@ </span>
+      <span class="brand-text font-weight-light">{{env('APP_NAME')}}</span>
+   </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../../dist/img/usuarioMiguel.jpg" class="img-circle elevation-2" alt="User Image">
+      <!--     <img src="../../dist/img/usuarioMiguel.jpg" class="img-circle elevation-2" alt="User Image"> -->
+                <img src="{{asset('dist/img/usuarioMiguel.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
         <a href="#" class="d-block">Miguel Torres</a>
@@ -21,14 +22,14 @@
 
       <!-- SidebarSearch Form -->
       <div class="form-inline">
-        <!-- <div class="input-group" data-widget="sidebar-search">
+       <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
             <button class="btn btn-sidebar">
               <i class="fas fa-search fa-fw"></i>
             </button>
           </div>
-        </div> -->
+        </div>
       </div>
 
 
@@ -299,7 +300,7 @@
           <!-- Gestion -->
           <li class="nav-item">
             <a href="../calendar.html" class="nav-link">
-              <i class="nav-icon fa fa-bolt"></i>
+              <i class="nav-icon fa fa-bolt" style="color: #FFD43B;"></i>
               <p>
                 Gestion
                 <span class="badge badge-info right">2</span>
@@ -308,7 +309,7 @@
           </li>
           <!-- Tickets --><li class="nav-item">
             <a href="../gallery.html" class="nav-link">
-              <i class="nav-icon fab fa-stack-overflow"></i>
+              <i class="nav-icon fa fa-ticket-alt" style="color: #FFD43B;"></i>
               <p>
                 Tickets
               </p>
@@ -318,7 +319,7 @@
           <li class="nav-header">CONFIGURACION</li>
           <li class="nav-item">
             <a href="../calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon fa fa-map-signs" style="color: #FFD43B;"></i>
               <p>
                 Tipos
                 <span class="badge badge-info right">2</span>
@@ -327,7 +328,7 @@
           </li>
           <li class="nav-item">
             <a href="../gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+               <i class="nav-icon fa fa-thermometer-half" style="color: #FFD43B;"></i>
               <p>
                 Prioridades
               </p>
@@ -338,7 +339,7 @@
           <li class="nav-header">REPORTES</li>
           <li class="nav-item">
             <a href="../calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon far fa-plus-square" style="color: #FFD43B;"></i>
               <p>
                 Nuevos Creados
                 </p>
@@ -346,7 +347,7 @@
           </li>
           <li class="nav-item">
             <a href="../gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon far fa-clock" style="color: #FFD43B;"></i>
               <p>
                 Pendientes
               </p>
@@ -357,7 +358,7 @@
           <li class="nav-header">ADMINISTRACION</li>
           <li class="nav-item">
             <a href="../calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="nav-icon fa fa-users" style="color: #FFD43B;"></i>
               <p>
                 Usuarios
                 </p>
@@ -365,7 +366,7 @@
           </li>
           <li class="nav-item">
             <a href="../gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fa fa-unlock" style="color: #FFD43B;"></i>
               <p>
                 Roles
               </p>
@@ -373,7 +374,7 @@
           </li>
           <li class="nav-item">
             <a href="../gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="nav-icon fa fa-key" style="color: #FFD43B;"></i>
               <p>
                 Permisos
               </p>

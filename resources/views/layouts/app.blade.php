@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{env('APP_NAME')}} | @yield('web_title','Inicio')</title>
+  <title>@yield('title','Inicio') | {{ env('APP_NAME') }}  </title>
   <!-- <link rel="stylesheet" href= "{{ asset('assets/cssprueba.css') }}"> -->
   <!-- <link rel="stylesheet" href= "{{ asset('css/app.css') }}"> -->
   <!-- Google Font: Source Sans Pro -->
@@ -39,7 +39,7 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <!-- <h1>Blank Page</h1> -->
-            <h1>@yield('title','Inicio')</h1>
+            <h1>@yield('icon_title') @yield('title','Inicio')</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">

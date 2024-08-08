@@ -1,21 +1,18 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\factories;
 
+use App\Models\Entities\Admin\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
 class UserFactory extends Factory
 {
-    /**
-     * The current password being used by the factory.
-     */
-    protected static ?string $password;
-
     /**
      * Define the model's default state.
      *
@@ -24,21 +21,29 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
+            'firstname' => fake()->firstName,
+            'lastname' => fake()->lastName,
+            'email' => fake()->unique()->safeEmail,
+            'username' => fake()->unique()->word,
+            'password' => '123456789***',
+            'start_date' => ($start = fake()->dateTimeBetween($startDate = '-5 years', $endDate = 'now')),// DateTime('2003-03-15 02:00:49', 'Africa/Lagos')
+            'email_verified_at' =>fake()->randomElement([null,($validated=fake()->dateTimeBetween($startDate = $start, $endDate = 'now'))]),
+            'end_date' =>fake()->randomElement(fake()->dateTimeBetween($startDate = $validated, $endDate = 'now')),
             'remember_token' => Str::random(10),
-        ];
-    }
+            'created_by'=>1,
+            'updated_by'=>1,
 
-    /**
-     * Indicate that the model's email address should be unverified.
-     */
-    public function unverified(): static
-    {
-        return $this->state(fn (array $attributes) => [
-            'email_verified_at' => null,
-        ]);
+          /*   'firstname' => $this->faker->firstName,
+            'lastname' => fake()->lastName,
+            'email' => fake()->unique()->safeEmail,
+            'username' => fake()->unique()->word,
+            'password' => static::$password ??= Hash::make('password'),
+            'start_date' => ($start = fake()->dateTimeBetween($startDate = '-5 years', $endDate = 'now')),// DateTime('2003-03-15 02:00:49', 'Africa/Lagos')
+            'email_verified_at' =>fake()->randomElement([null,($validated=fake()->dateTimeBetween($startDate = $start, $endDate = 'now'))]),
+            'end_date' =>fake()->randomElement(fake()->dateTimeBetween($startDate = $validated, $endDate = 'now')),
+            'remember_token' => Str::random(10),
+            'created_by'=>1,
+            'updated_by'=>1, */
+            ];
     }
 }

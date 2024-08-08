@@ -3,13 +3,16 @@
 
 @section('web_title','Inicio Tickets')
 
+@section('title','Inicio Tickets')
 
-@section('title')
-<i class="fa fa-home"></i> Inicio
+@section('icon_title')
+<i class="fa fa-home"></i>
 @endsection
 
 @section('content')
-    <div class="card">
+
+
+<div class="card">
         <div class="card-header">
           <h3 class="card-title">Title</h3>
 
@@ -21,15 +24,17 @@
               <i class="fas fa-times"></i>
             </button>
           </div>
-        </div>
-        <div class="card-body">
+ </div>
+
+<div class="card-body">
           Start creating your amazing application!
-        </div>
+ </div>
         <!-- /.card-body -->
-        <div class="card-footer">
+
+<div class="card-footer">
           Footer
         </div>
         <!-- /.card-footer-->
-    </div>
+</div>
 
  @endsection
