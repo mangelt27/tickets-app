@@ -48,9 +48,9 @@ class UserTableSeeder extends Seeder
         $user->updated_by = $root->id;
         $user->save();
 
-        User::factory(100)->create([
+        User::factory(50)->create([
             'created_by'=> 4,
-            'firstname'=>'asd'
+            //'firstname'=>'asd'
         ]);
 
 

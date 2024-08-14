@@ -3,7 +3,7 @@
 @section('title', 'Listado de Usuarios')
 
 @section('icon_title')
-<i class="fa fa-fw fa-users"></i>
+ <i class="fa fa-fw fa-users"></i>
 @endsection
 
 @section('content')
@@ -25,8 +25,7 @@
     </div>
 
 <div class="card-body">
-
-         <div class="table-responsive">
+        <div class="table-responsive">
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -35,9 +34,26 @@
                         <th>Usuario</th>
                         <th>Fecha de Inicio</th>
                         <th>Fecha de Fin</th>
+                        <th>Creado Por</th>
                     </tr>
                 </thead>
                 <tbody>
+
+                @foreach($users as $user)
+                    <tr>
+                        <td>{{$user->firstname}}</td>
+                        <td>{{$user->email}}</td>
+                        <td>{{$user->username}}</td>
+                        <td>{{$user->start_date}}</td>
+                        <td>{{$user->end_date}}</td>
+                        <td>{{$user->created_by}}</td>
+                        <!-- <td>Correo 1</td>
+                        <td>Usuario 1</td>
+                        <td>Fecha de Inicio 1</td>
+                        <td>Fecha de Fin 1</td> -->
+                    </tr>
+                    @endforeach
+                   <!--  @for($i=0;$i<=2;$i++)
                     <tr>
                         <td>Nombre 1</td>
                         <td>Correo 1</td>
@@ -45,6 +61,8 @@
                         <td>Fecha de Inicio 1</td>
                         <td>Fecha de Fin 1</td>
                     </tr>
+                    @endfor -->
+<!--
                     <tr>
                         <td>Nombre 2</td>
                         <td>Correo 2</td>
@@ -107,16 +125,22 @@
                         <td>Usuario 10</td>
                         <td>Fecha de Inicio 10</td>
                         <td>Fecha de Fin 10</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
-         </div>
+        </div>
         <!-- div.table-responsive>table.table.table-hover>(thead>tr>th{Nombres}+th{Correo}+th{Usuario}th{Fecha de Inicio}+th{Fecha de Fin})+(tbody>tr*10>td*5) -->
+        {{ $users->links() }}
 
- </div> <!-- /.card-body -->
+
+
+
+</div> <!-- /.card-body -->
 
 
 <!-- <div class="card-footer">
         Footer
     </div> --><!-- /.card-footer-->
+
+
 @endsection
